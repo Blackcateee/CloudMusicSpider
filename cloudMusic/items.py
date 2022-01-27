@@ -31,3 +31,4 @@ class CloudmusicItem(scrapy.Item):
     song_comment = scrapy.Field()  # 歌曲评论数量
     song_albumPicture = scrapy.Field()  # 专辑图片链接
     song_chain = scrapy.Field()  # 外链链接
+    song_url = scrapy.Field()  # 歌曲播放链接

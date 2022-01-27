@@ -104,6 +104,8 @@ class CloudmusicSpider(scrapy.Spider):
         # 专辑图片链接
         item_song['song_albumPicture'] = response.xpath(
             '//img[@class="j-img"]/@data-src').extract()
+        # 歌曲播放链接
+        item_song['song_url'] = 'http://music.163.com/song/media/outer/url?id='+item_song['song_id']+'.mp3'
         # 外链链接 TODO
         # print(item_song)
         yield item_song
